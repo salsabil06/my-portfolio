@@ -101,10 +101,79 @@
     .skill-cell h3{font:500 1.35rem var(--serif);margin:13px 0 0}
     .credentials{background:var(--ivory)}
     .credential-list{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
-    .credential{padding:22px 0;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:flex-start}
-    .credential-icon{width:34px;height:34px;border:1px solid var(--sand);display:grid;place-items:center;color:var(--mocha);flex:none}
-    .credential h3{font:500 1.15rem var(--serif);margin:0 0 4px}
-    .credential p{margin:0;color:var(--muted);font-size:.8rem}
+    
+    .credential-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+    }
+    
+    .credential {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 14px;
+        transition: transform .3s ease;
+    }
+    
+    .credential:hover {
+        transform: translateY(-5px);
+    }
+    
+    .credential-image {
+        width: 100%;
+        height: 210px;
+        background: #f3eee7;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .credential-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform .3s ease;
+    }
+    
+    .credential:hover .credential-image img {
+        transform: scale(1.03);
+    }
+    
+    .credential h3 {
+        font: 500 1.15rem var(--serif);
+        margin: 16px 0 4px;
+    }
+    
+    .credential p {
+        margin: 0;
+        color: var(--muted);
+        font-size: .8rem;
+    }
+    
+    .credential-link {
+        display: block;
+        margin-top: 12px;
+        font-size: .75rem;
+        color: var(--mocha);
+        text-decoration: underline;
+    }
+    
+    /* Responsive certificates */
+    @media(max-width: 800px) {
+        .credential-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    
+    @media(max-width: 500px) {
+        .credential-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .contact{background:#e8ded1}
     .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:10%;align-items:end}
     .contact h2{font:500 clamp(3rem,6vw,5.7rem)/1.02 var(--serif);letter-spacing:-.06em;margin:14px 0 24px}
@@ -352,11 +421,59 @@
           <div><div class="eyebrow">05 / Beyond the classroom</div><h2>Certificates &<br>experiences.</h2></div>
           <p>Small milestones that represent curiosity, initiative, and a commitment to continuous learning.</p>
         </div>
-        <div class="credential-list reveal">
-          <div class="credential"><div class="credential-icon">✳</div><div><h3>Study Skills for University Success</h3><p>Coursera · Online course</p></div></div>
-          <div class="credential"><div class="credential-icon">✳</div><div><h3>German A1</h3><p>Beginner-level language certificate</p></div></div>
-          <div class="credential"><div class="credential-icon">✳</div><div><h3>Baccalaureate Mathematics</h3><p>Academic qualification</p></div></div>
-        </div>
+        
+      <div class="credential-list reveal">
+      
+          <!-- Certificate 1 -->
+          <article class="credential">
+              <a href="certificates/coursera.jpg" target="_blank">
+                  <div class="credential-image">
+                      <img src="certificates/coursera.jpg"
+                           alt="Study Skills for University Success certificate">
+                  </div>
+              </a>
+              <h3>Study Skills for University Success</h3>
+              <p>Coursera · Online course</p>
+              <a class="credential-link"
+                 href="certificates/coursera.jpg" target="_blank">
+                  View certificate ↗
+              </a>
+          </article>
+      
+          <!-- Certificate 2 -->
+          <article class="credential">
+              <a href="certificates/german-a1.jpg" target="_blank">
+                  <div class="credential-image">
+                      <img src="certificates/german-a1.jpg"
+                           alt="German A1 certificate">
+                  </div>
+              </a>
+              <h3>German A1</h3>
+              <p>German language · Beginner level</p>
+              <a class="credential-link"
+                 href="certificates/german-a1.jpg" target="_blank">
+                  View certificate ↗
+              </a>
+          </article>
+      
+          <!-- Certificate 3 -->
+          <article class="credential">
+              <a href="certificates/bac-math.jpg" target="_blank">
+                  <div class="credential-image">
+                      <img src="certificates/bac-math.jpg"
+                           alt="Baccalaureate Mathematics certificate">
+                  </div>
+              </a>
+              <h3>Baccalaureate Mathematics</h3>
+              <p>Academic qualification · Tunisia</p>
+              <a class="credential-link"
+                 href="certificates/bac-math.jpg" target="_blank">
+                  View certificate ↗
+              </a>
+          </article>
+      
+      </div>
+
       </div>
     </section>
 
