@@ -51,6 +51,17 @@
     .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;background:var(--espresso);color:white;font-size:.82rem;letter-spacing:.04em;border:1px solid var(--espresso);transition:.25s}
     .btn:hover{background:var(--mocha);border-color:var(--mocha);transform:translateY(-2px)}
+    .btn-outline {
+        background: transparent;
+        color: var(--espresso);
+        border: 1px solid var(--espresso);
+    }
+    
+    .btn-outline:hover {
+        background: var(--sand);
+        color: var(--espresso);
+        border-color: var(--sand);
+    }
     .text-link{font-size:.83rem;border-bottom:1px solid var(--caramel);padding-bottom:4px}
     .hero-visual{position:relative;max-width:460px;justify-self:end;width:100%}
     .portrait-frame{aspect-ratio:4/5;background:linear-gradient(145deg,#e8ded1,#c5a991);position:relative;overflow:hidden}
@@ -297,6 +308,17 @@
           <p class="hero-lead">A software engineering student with a curious mind, a creative perspective, and a growing passion for building meaningful technology.</p>
           <div class="hero-actions">
             <a class="btn" href="#projects">Explore my work&nbsp; ↗</a>
+          
+            <a class="btn" href="documents/cv.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View my CV ↗
+            </a>
+          
+            <a class="btn btn-outline" href="documents/motivation-letter.pdf"
+               target="_blank" rel="noopener noreferrer">
+               Motivation Letter ↗
+            </a>
+          
             <a class="text-link" href="#about">A little about me</a>
           </div>
         </div>
